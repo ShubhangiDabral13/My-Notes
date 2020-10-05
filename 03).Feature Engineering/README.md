@@ -1,8 +1,8 @@
 
 ## Feature Engineering 
 
-* [Types of Enodings](https://github.com/ShubhangiDabral13/My-Notes#Types_of_Encodings)
-* [Why we feature scaling?](https://github.com/ShubhangiDabral13/My-Notes#Why-we-do-feature-scaling?)
+* [Types of Enodings](https://github.com/ShubhangiDabral13/My-Notes/Feature%20Engineering#Types_of_Encodings)
+* [Why we feature scaling?](https://github.com/ShubhangiDabral13/My-Notes/Feature%20Engineering#Why-we-do-feature-scaling?)
 ### Types of Encodings 
     A. Nnominal Encodings : the features consist of different catergories like sex: male of female.
     
