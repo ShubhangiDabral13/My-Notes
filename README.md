@@ -1,2 +1,2 @@
-# Python-Visualization-and-Analysis-Libraries
-Detail overview of all the python visualization and Analysis libraries
+# My Notes.
+Contains the notes on various topic of machine learning.
