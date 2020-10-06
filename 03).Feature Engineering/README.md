@@ -58,24 +58,24 @@
         So for that we will use Mean Encodings.
         
         
-### Why we do feature scaling?
+## Why we do feature scaling?
 Feature scaling is a step of Data Pre-Processing which is applied to independent variables or features of data. 
  It basically helps to normalise the data within a particular range. Sometimes it speed up the calculations of 
     algorithms also.
 
-#### Algorithms that require feature scaling 
+### Algorithms that require feature scaling 
 
-   * Algorthms which have gradient desent.
-           * Linear Regression : We do feature scaling then our cofficent might be close to global minima and also 
+ * Algorthms which have gradient desent.
+     * Linear Regression : We do feature scaling then our cofficent might be close to global minima and also 
            we will very quickly converge to gobal minina.
-           * Neural Networks.
-   * All supervised and unsupervised learning which uses Euclidian Distances.
-          * K-means clustering
-          * K Nearest Neighbors
-        If we Feature Scaling then the euiclidain distance between the points will decrease and our algorithms 
+     * Neural Networks.
+* All supervised and unsupervised learning which uses Euclidian Distances.
+     * K-means clustering
+     * K Nearest Neighbors
+ If we Feature Scaling then the euiclidain distance between the points will decrease and our algorithms 
         will work fast.
         
-#### Algorithms that does not require features scaling
+### Algorithms that does not require features scaling
     
    * Decision Tree
    * Random Forest
