@@ -38,6 +38,22 @@
         use one hot encoding then we will have to create 99 columns so to convert those categories to
         float/integers we will Mean Encoding.
         
+        
+  **A.4 Count or frequency encoding**
+  
+  * If we have categorical variables containing many multiple labels or high cardinality,then by using one hot encoding, we will expand the feature space dramatically.
+  * One approach that is heavily used in Kaggle competitions, is to replace each label of the categorical variable by the count, this is the amount of times each label appears in the dataset. Or the frequency, this is the percentage of observations within that category. The 2 are equivalent.
+  
+  
+    There are some advantages and disadvantages that we will discuss now
+
+    #### Advantages
+    * It is very simple to implement
+    * Does not increase the feature dimensional space
+    #### Disadvantages
+    * If some of the labels have the same count, then they will be replaced with the same count and they will loose some valuable information.
+    * Adds somewhat arbitrary numbers, and therefore weights to the different labels, that may not be related to their predictive power
+
 
   ### B. Ordinal Encodings : consist of features which consist of different categories whose rank also matter :1st,2nd and 3rd.
      
@@ -84,4 +100,18 @@ Feature scaling is a step of Data Pre-Processing which is applied to independent
    Whether regression or classification problem we don't need to perform feature scaling cause the number of 
     branches remain same irrespective of the number of features.
     
-        
+   
+## Handle Missing values in categorical dataset.
+
+#### 1.Delete the rows 
+One way is to delete the rows which contains the missing values. But this is not an afective method cause by deleting the rows we are loosing information from our dataset. It is affective when we have suppose thousands of rows and there are 2-3 rows which have missing values.
+
+#### 2.Replace with the most frequent values.
+If we have mssing values in the particular columns then we caan replace that columns missing value with the most frequent value of that column. But it does not guarantee.
+
+#### 3.Apply classifier algorithm to predict.
+We can apply classifier algorithm to our dataset by treating the column which has a missing values as an output(y)/target of our model and other columns including actual output or taget column as a x or input columns for the classification model . First we train the model without missing  values and after that for testing we pass those missing rows whose values we want.
+
+#### 4.Apply unsupervised machine learning algorithms.
+Applying the cluserting algorithms. For that we will skip the column that has missing values and also the actual tarrget/output column and consider all others columns . Suppose we have two categories in the missing column eg male/female then we will create two cluster If we have three categoriess then there will be three cluster . Number of cluster = number of categories in missing column. 
+
