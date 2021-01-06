@@ -12,7 +12,7 @@ There are various reason of getting missing values in the dataset.
  * Device error.
  
  
- ## Why is it important to handle missing values?
+## Why is it important to handle missing values?
  Is it impotant to handle missing values because
  * The absence of data reduces statistical power.
  * Data cannot be analysed properly.
@@ -21,7 +21,7 @@ There are various reason of getting missing values in the dataset.
  
  Before diving into different techniques to handle missing values. it is quite important to know different types of Missing values.
  
- ## Different types of missing values.
+## Different types of missing values.
 1) Missing Completely at Random — (MCAR).
 2) Missing Not at Random — (MNAR).
 3) Missing at Random — (MAR).
@@ -44,7 +44,7 @@ for a data point , to be missing is not related to the missing data, but it is r
 
  
  
- ## How to handle missing values?
+## How to handle missing values?
  Techniques to handle missing values are
  * Mean/median/Mode Replacement.
  * Random Sample Imputation.
@@ -54,9 +54,11 @@ for a data point , to be missing is not related to the missing data, but it is r
  * Frequent Categories Imputation.
  
  
- ### 1).Mean/Median/Mode Implementation 
- In this imputation technique goal is to replace missing data with statistical estimates of the missing values. Mean, Median or Mode can be used as imputation
+ 
+### 1).Mean/ Median/ Mode Imputation
+*  In this imputation technique goal is to replace missing data with statistical estimates of the missing values. Mean, Median or Mode can be used as imputation
  value.
+ * It is applied to numerical data
  
  
  * *Mean Implementation:* One of the technique is mean imputation in which the missing values are replaced with the mean value of the entire feature column. 
@@ -82,12 +84,63 @@ for a data point , to be missing is not related to the missing data, but it is r
 When the data is skewed, it is good to consider using mode value for replacing the missing values. Note that imputing missing data with mode value can be done 
 with numerical and categorical data.
 
+### 2).Random Sample Imputation
+* In random sample imputation, we take random observation from the dataset and we use it to fill the NaN values.
+* It also assumes that the data are missing completely at random(MCAR).
+* Works for all categorical and numeric data.
 
-To be continued....
+#### Advantages:
+* Easy to implement.
+* Less distortion in variance/standard-deviation.
+
+#### Disadvantage:
+* In every situation randomness won't work.
+
+### 3).Capturing NaN Values With A New Features
+* Here we make a new columns which will capture the NaN values.
+* The new column will have 1 where the NaN value is present and 0 where it's not present.
+* Works for both categorical and numeric data.
+
+#### Advantage:
+* Easy to implement.
+* Captures the importance of missing value.
+
+#### Disadvantage:
+* Creating additional features(curse of dimensionality)
+
+### 3).End of Distribution Imputation
+* Here, we pick the values from end of the distribution and fill NaN values with these values.
+* For a normal distribution values which are greater than and equal to mean + 3std* are the extreme values.
+* This will remove the outliers from the data.
+* Works for numeric data.
+
+### 4).Arbitrary Value Imputation
+* Arbitrary value imputation consists of replacing all occurrences of missing values (NA) within a variable with an arbitrary value. 
+* The arbitrary value should be different from the mean or median and not within the normal values of the variable.
+* Works for numeric data.
+
+#### Advantages
+* Easy to implement.
+* Captures the importance of missingess if there is one.
+
+#### Disadvantages
+* Distorts the original distribution of the variable.
+* If missingess is not important, it may mask the predictive power of the original variable by distorting its distribution.
+* Hard to decide which value to use.
+
+### 5).Frequent Categories Imputation.
+* Frequent category imputation—or mode imputation—consists of replacing all occurrences of missing values (NA) within a variable with the mode, or the most frequent value.
+* This method is suitable for numerical and categorical variables, but in practice, we use this technique with categorical variables.
+
+#### Advantages
+* Easy To implement
+* Fater way to implement
+
+#### Disadvantages
+* Since we are using the more frequent labels, it may use them in an over respresented way, if there are many nan's.
+* It distorts the relation of the most frequent label.
 
 
 
- 
- 
- 
- 
+For more info click on this link: https://heartbeat.fritz.ai/hands-on-with-feature-engineering-techniques-imputing-missing-values-6c22b49d4060
+
