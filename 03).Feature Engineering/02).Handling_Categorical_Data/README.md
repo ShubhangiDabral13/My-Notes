@@ -64,3 +64,6 @@ Categorical data is simply information aggregated into groups rather than being 
 
 
 ### 5).Mean Encoding
+
+
+for more detials click on this link : https://towardsdatascience.com/ways-to-handle-categorical-data-before-train-ml-models-with-implementation-ffc213dc84ec
